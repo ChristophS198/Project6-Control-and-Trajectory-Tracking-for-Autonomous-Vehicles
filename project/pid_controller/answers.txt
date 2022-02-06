@@ -22,9 +22,9 @@ I recognized this in the steering Controller, where the steering overshoots when
 // How would you design a way to automatically tune the PID parameters?
 I would try to tune the PIDs independently. 
 For the throttle controller I would start with a simulation environment without obstacles and use Twiddle to find optimal parameters as shwon in the lesson. 
-Next I would use this controller and try to optimize the steering parameters. For this we need to define a new cost function for Twiddle, because we also 
-have to penalize collisions with cars, walls, .... Maybe it would be enough to use the yaw error as cost function + add some large offset if the car 
-collides with a obstacle. 
+Next I would use this controller with constant parameters and try to optimize the parameters of the steering PID. 
+For this we need to define a new cost function for Twiddle, because we also have to penalize collisions with cars, walls, .... 
+Maybe it would be enough to use the yaw error as cost function + add some large offset if the car collides with a obstacle. 
 At last I would try to tune both parameter sets (throttel and steering controller) with Twiddle. Here again collisions are incorporated with a large offset
 and the errors in velocity and steering a added with different factors. For the factors I would also try different values, but from intuition I would 
 choose a larger factor for steering.  
