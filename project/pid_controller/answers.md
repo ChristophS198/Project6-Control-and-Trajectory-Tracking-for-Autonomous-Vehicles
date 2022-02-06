@@ -9,10 +9,10 @@ The second plot below shows the throttle error (blue), i.e., the difference betw
 For both curves we see how the output of the respective controller tries to follow the current error. 
 
 ## What is the effect of the PID according to the plots, how each part of the PID affects the control command?
-The PID Controller steers the ego vehicle based on the error terms described in the section above. The controller equation
-$$ 
-\text{Output} = -K_P \, \text{Err} - K_D \frac{\mathrm{d}}{\mathrm{d}t} \text{Err} -K _I \sum_0^T \text{Err}
-$$
+The PID Controller steers the ego vehicle based on the error terms described in the section above. The controller equation  
+
+<img src="https://render.githubusercontent.com/render/math?math=\text{Output} = -K_P \, \text{Err} - K_D \frac{\mathrm{d}}{\mathrm{d}t} \text{Err} -K _I \sum_0^T \text{Err}">
+
 comprises the following three summands:  
 ### Proportional term
 The P term defines the direct influence of the error magnitude on the control output. 
