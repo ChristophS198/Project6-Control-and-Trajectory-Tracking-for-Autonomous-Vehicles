@@ -3,9 +3,9 @@
 ## Add the plots to your report and explain them (describe what you see)
 The plots can be found in the screenshot folder.  
 We have two plots, one for the steering error, which is calculated as the difference between current heading and desired heading direction. The following curves show the output of the steering PID controller (orange) and the steering error (blue), which is used for the control calculations.    
-![SteeringPlot](screenshot/Steering.png) 
+![SteeringPlot](screenshot/Steering.png)   
 The second plot below shows the throttle error (blue), i.e., the difference between our current velocity and the desired velocity returned by the trajectory planner. Furthermore, the control output is plotted in green, if the velocity is positive or orange if the velocity is negative and the car brakes.   
-![SteeringPlot](screenshot/Throttle.png)
+![SteeringPlot](screenshot/Throttle.png)  
 For both curves we see how the output of the respective controller tries to follow the current error. 
 
 ## What is the effect of the PID according to the plots, how each part of the PID affects the control command?
