@@ -301,7 +301,7 @@ int main ()
           /**
           * TODO (step 3): compute the steer error (error_steer) from the position and the desired trajectory
           **/
-          // Calculate desired heading based on trajectory connection between last two path points
+          // Calculate desired heading based on trajectory connection between last two path points. This returns the desired orienation at the trajecotry end
           double current_yaw = angle_between_points(x_points[x_points.size()-2], y_points[y_points.size()-2], x_points[x_points.size()-1], y_points[y_points.size()-1]);
           // Steering error corresponds to the difference between current heading and desired heading
           error_steer = current_yaw - yaw;
@@ -339,6 +339,7 @@ int main ()
           **/
           // modify the following line for step 2
           // Throttle error is computed as velocity difference between current speed (velocity) and desired speed (last element in v_points)
+          // I use the velocity at the trajectory end 
           error_throttle = v_points.back() - velocity;
 
 
